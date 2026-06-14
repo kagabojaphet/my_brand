@@ -29,7 +29,7 @@ npm run build
 
 All content is in each page file. To make it yours:
 
-1. **Replace name/details** — Search for "John Doe" across all files
+1. **Replace name/details** — Search for "Japhet Iradukunda" across all files
 2. **Update colors** — Edit `accent` in `tailwind.config.js`
 3. **Update fonts** — Edit `fontFamily` in `tailwind.config.js` + `index.html`
 4. **Add your photo** — Replace the placeholder div in `Home.jsx` and `About.jsx` with `<img src="/photo.jpg" />`
