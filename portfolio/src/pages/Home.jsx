@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, Download, Server, Globe, Smartphone } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import PageWrapper from "../components/PageWrapper";
+import profile from "../assets/My-profile.jpeg";
 
 const roles = ["Full-Stack Developer", "Server Engineer", "Mobile Developer", "DevOps Specialist"];
 
@@ -74,23 +75,31 @@ export default function Home() {
             </motion.div>
           </div>
 
-          {/* Avatar */}
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}
-            className="flex justify-center">
-            <div className="relative">
-              <div className="w-72 h-72 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-accent/20 to-orange-400/20 border-2 border-accent/30 flex items-center justify-center overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 flex items-center justify-center">
-                  <span className="font-display text-7xl font-700 text-neutral-400 dark:text-neutral-500">IJ</span>
-                </div>
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 px-4 py-2 rounded-xl shadow-lg">
-                <span className="font-display text-sm font-600">Docker · K8s · AWS</span>
-              </div>
-              <div className="absolute -top-4 -right-4 bg-accent text-white px-4 py-2 rounded-xl shadow-lg">
-                <span className="font-display text-sm font-600">50+ projects</span>
-              </div>
-            </div>
-          </motion.div>
+{/* Avatar */}
+<motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.5 }}
+  className="flex justify-center">
+  <div className="relative">
+    <div className="w-72 h-72 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-accent/20 to-orange-400/20 border-2 border-accent/30 flex items-center justify-center overflow-hidden">
+      <div
+        className="w-full h-full bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 flex items-center justify-center"
+        style={{
+          backgroundImage: `url(${profile})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        {/* <span className="font-display text-7xl font-700 text-neutral-400 dark:text-neutral-500">IJ</span> */}
+      </div>
+    </div>
+    <div className="absolute -bottom-4 -left-4 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 px-4 py-2 rounded-xl shadow-lg">
+      <span className="font-display text-sm font-600">Docker · K8s · AWS</span>
+    </div>
+    
+    <div className="absolute -top-4 -right-4 bg-accent text-white px-4 py-2 rounded-xl shadow-lg">
+      <span className="font-display text-sm font-600">50+ projects</span>
+    </div>
+  </div>
+</motion.div>
         </div>
       </section>
 

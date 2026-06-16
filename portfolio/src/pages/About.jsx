@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Download, Briefcase, GraduationCap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import PageWrapper from "../components/PageWrapper";
+import profile from "../assets/Group-Picture.jpg";
 
 const skills = [
   // Frontend
@@ -60,11 +61,33 @@ export default function About() {
 
           {/* Bio */}
           <div className="grid md:grid-cols-2 gap-16 items-start mb-24">
-            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.2 }}>
-              <div className="aspect-square max-w-sm rounded-3xl bg-gradient-to-br from-neutral-200 to-neutral-300 dark:from-neutral-700 dark:to-neutral-800 flex items-center justify-center border border-neutral-200 dark:border-neutral-800">
-                <span className="font-display text-8xl font-700 text-neutral-400 dark:text-neutral-500">IJ</span>
-              </div>
-            </motion.div>
+           <motion.div
+  initial={{ opacity: 0, x: -30 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ delay: 0.2 }}
+>
+  <div className="relative aspect-square max-w-sm">
+
+    {/* Decorative background ring */}
+    <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-accent/20 to-orange-400/10 border border-accent/20 dark:border-accent/30" />
+
+    {/* Offset decorative block */}
+    <div className="absolute -bottom-3 -right-3 w-full h-full rounded-3xl border border-neutral-200 dark:border-neutral-800 -z-10" />
+
+    {/* Photo */}
+    <img
+      src={profile}
+      alt="Japhet Iradukunda"
+      className="relative w-full h-full object-cover object-center rounded-3xl border border-neutral-200 dark:border-neutral-800 shadow-xl"
+    />
+
+    {/* Availability badge */}
+    <div className="absolute -bottom-4 -left-4 flex items-center gap-2 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 px-4 py-2.5 rounded-2xl shadow-lg">
+      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+      <span className="text-xs font-500 text-neutral-700 dark:text-neutral-300">Available for work</span>
+    </div>
+  </div>
+</motion.div>
 
             <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3 }}>
               <p className="text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed mb-5">
